@@ -13,12 +13,12 @@ Api para registro de usuarios y compras de productos en linea.
 
 ## Descripcion de la API
 
-Puede usar (Postman)[https://postman.com] para interactuar con los Endpoints
+Puede usar [Postman](https://postman.com) para interactuar con los Endpoints
 
 ### Endpoints
 
-EndPoint | Metodo | Formato | Variables | Comentatios
--|-|-
+| EndPoint | Metodo | Formato | Variables | Comentatios
+|-|-|-
 /invoices/create | POST | json | token |
 /sign-up | POST | json | name, password |
 /login | GET | Auth | username, password |
