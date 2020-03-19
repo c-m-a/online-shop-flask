@@ -5,7 +5,7 @@ Api para registro de usuarios y compras de productos en linea.
 
 ## Tecnoligias Usadas
 
-* Flask
+* Flask: Web framework
 * PyJWT: Para generar WEB token de autentiacion
 * SQLAlchemy: Para generar el modelo y usar CRUD a cada uno.
 * Flask-Migrate: Generar versiones del modelo de datos.
@@ -30,5 +30,18 @@ Puede usar [Postman](https://postman.com) para interactuar con los Endpoints
 /products/<id:int> | PUT | json | token, products(name, description, price, discount) | token del usuario admin
 /products | POST | json | token, products(name, description, price, discount) | acceso a rol admin
 
+### 4blox.co:5000/invoices/create
 
+Para crear una orden de compra el usuario debe encontrarse autenticado y enviar el TOKEN
+por defecto el tiempo de expiracion es 10 min.
 
+Enviar en formato json la lista de productos que el usuario va ordenar.
+
+```json
+{
+  "products": [
+    {"id": 1, "quantity": 2},
+    {"id": 2, "quantity": 1}
+  ]
+}
+```
